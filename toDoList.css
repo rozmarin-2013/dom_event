@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.toDoList-container {
+    display: inline-block;
+    width: 30%;
+    margin: 0 auto;
+    font-size: 16px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.toDoList-container-header {
+    text-align: center;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.toDoList-container-body {
+    border: 1px solid lightsteelblue;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.toDoList-container-body-input {
+    padding: 15px;
+}
+
+.toDoList-container-body input {
+    width: calc(100% - 30px);
+    padding: 5px;
+    border: 1px solid lightgray;
+}
+
+.toDoList-container-body input::placeholder {
+    font-style: italic;
+    font-weight: bold;
+}
+
+.item-task {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.item-task:not(:last-child) {
+    border-bottom: 1px solid lightgray;
+}
+
+.item-task.checked {
+    text-decoration: line-through;
+}
+
+.item-task-check span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: lightgray;
+    border-radius: 2px;
+    display: inline-block;
+}
+.item-task.checked .item-task-check span {
+    background-color: lightgreen;
+}
+
+.item-task.checked .item-task-check span::before{
+    position: absolute;
+    content: '';
+    left: 3px;
+    top: 4px;
+    width: 20px;
+    height: 10px;
+    border-radius: 1px;
+    border-left: 4px solid darkseagreen;
+    border-bottom: 4px solid darkseagreen;
+    transform: rotate(-45deg);
+}
+
+.item-task-text {
+    text-align: left;
+    text-transform: uppercase;
+    margin-left: 15px;
+}
