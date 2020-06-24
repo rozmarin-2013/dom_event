@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
     const ToDoList = function(parent = document.body) {
 
         function createElm(className = '', tagName = 'div') {
-            let elm = document.createElement(tagName);
+            const elm = document.createElement(tagName);
 
             if(className) {
                 elm.classList.add(className);
@@ -35,7 +35,7 @@ window.addEventListener('load', function () {
                 const itemTaskElm = createElm(itemTask);
                 parentForTaskElm.append(itemTaskElm);
                 itemTaskElm.insertAdjacentHTML('beforeend', itemTaskHtml);
-                let textElm = itemTaskElm.querySelector(selectorForText);
+                const textElm = itemTaskElm.querySelector(selectorForText);
                 textElm.append(text);
                 itemTaskElm.querySelector(checkElm).addEventListener('click', checkTask)
             }
